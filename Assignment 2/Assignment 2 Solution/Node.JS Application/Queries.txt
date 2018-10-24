@@ -1,0 +1,37 @@
+X------X
+Query - 1
+
+SELECT mode_of_entry, month_year, visitor_origin, country, no_of_visitors 
+from nova 
+FETCH FIRST 10 ROWS ONLY;
+
+Response Time: 0.007 Seconds
+			
+
+X------X
+
+
+X------X
+Query 2:
+
+
+select sum(no_of_visitors) as Total, year(month_year) as Year ,country
+from nova
+group by year(month_year) ,country order by country,Year;
+
+
+Response Time: 0.019 Seconds
+X------X
+
+
+X------X
+Query 3:
+
+select sum(no_of_visitors) as Total, year(month_year) as Year ,mode_of_entry
+from nova
+group by year(month_year) ,mode_of_entry order by mode_of_entry,Year;
+
+
+
+Response Time: 0.018 Seconds
+X------X

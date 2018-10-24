@@ -1,0 +1,7 @@
+We have taken dataset from sample dataset provided by WEKA
+
+kindly, find link for the same below
+
+Link: https://drive.google.com/open?id=1cj2Uw0Abhp56bqp1umrlK0HlJ4GpZNCL
+
+Note: for viewing generated rules in txt format properly (better structured text), prefer some editor such as Notepad++ or other tools rather than Notepad.

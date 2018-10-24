@@ -1,0 +1,19 @@
+x----x
+Task 2:-
+Both Python File(Query 2.py) and Python Notebook(Query 2.ipynb)
+
+x----x
+
+
+x----x
+Task 3:-
+Python Notebook(Query 3.ipynb)
+
+x----x
+
+
+x----x
+Task 4:-
+Python Notebook(Query 4.ipynb)
+
+x----x

@@ -1,0 +1,67 @@
+Question 1
+X----X
+
+{ "query": { "match_phrase": { "name_stop": "Ferry Stop - Woodside" } }, "_source": ["stop_id"]  
+
+{ "query": { "match_phrase": { "stop_id": "1075" } }, "_source": ["trip_id"]  }
+
+{ "query": { "match_phrase": { "trip_id": "6219216-2012_08A-12AferWD-Weekday-01" } }, "_source": ["trip_headsign"]  }
+
+X----X
+
+Question - 2
+X----X
+
+{ "query": { "range":
+ { "arrival_time": 
+{"gte" : "15:00:00", 
+"lt": "16:30:00"} } }, 
+"_source": ["trip_id"]  }
+
+{ "query": { "match_phrase": { "trip_id": "6516065-2012_05M-1205BRsa-Saturday-02" } }, "_source": ["trip_headsign"]  }
+
+X----X
+
+Question - 3
+X----X
+
+
+{
+  "query": {
+ "bool": {
+ "must": [
+ {"match_phrase": {"trip_headsign": "14 DOWNTOWN"}},
+ {"match_phrase": {"route_id": "14-114"} }
+ ]
+ }
+ }
+}
+
+{ "query": { "match_phrase": { "trip_id": "6524119-2012_08A-1208BRwd-Weekday-01" } }, "_source": ["stop_sequence", "stop_id"]  }
+
+{ "query": { "match_phrase": { "stop_id": "6900" } }, "_source": ["name_stop"]  }
+
+X----X
+
+Question - 4
+X----X
+
+
+{
+  "size": 0,
+  "aggs": {
+    "group_by_stop_id": {
+      "terms": {
+        "field": "stop_id"
+      }
+    }
+  }
+}
+
+{ "query": { "match_phrase": { "stop_id": "8643" } }, "_source": ["name_stop"]  }
+
+{ "query": { "match_phrase": { "stop_id": "6105" } }, "_source": ["name_stop"]  }
+
+{ "query": { "match_phrase": { "stop_id": "6108" } }, "_source": ["name_stop"]  }
+
+X----X

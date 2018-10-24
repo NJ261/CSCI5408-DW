@@ -1,0 +1,50 @@
+Question - 1
+X----X 
+
+select trip_headsign
+from trips, stops
+where name_stop like 'Ferry Stop - Woodside';
+
+X----X
+
+Question - 2
+X----X
+
+select trip_headsign
+from trips, stoptimes
+where arrival_time between '15:00:00' and '16:30:00';
+
+X----X
+
+Question - 3
+X-----X
+
+select stoptimes.stop_sequence, name_stop, route_id, trip_headsign, trips.trip_id
+from trips, stops
+inner join stoptimes on trips.trip_id = stoptimes.trip_id
+where trip_headsign like '14 DOWNTOWN' and route_id like '14-114';
+
+X-----X
+
+Question - 4
+X-----X
+
+-- it contains 2 queries
+-- 1st part is for finding which one is busy by counting stop_id from stoptimes
+
+select count(stop_id), stop_id
+from stoptimes
+group by stop_id
+order by count(stop_id) desc;
+
+-- 2nd part is to assign the names of Bus-Stop with the help of stop_id
+select name_stop, stop_id
+from stops
+where stop_id = '6108' or stop_id = '6105' or stop_id = '8643';
+
+-- Result
+-- 1   mumford Terminal [outbound In Terminal]	    Stop_id: 8643
+-- 2	barrington St [southbound] before Duke St	Stop_id: 6105
+-- 3	barrington St [southbound] before George St	Stop_id: 6108
+
+X-----X

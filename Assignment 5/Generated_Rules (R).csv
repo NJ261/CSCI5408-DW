@@ -1,0 +1,6 @@
+"rules","support","confidence","lift"
+"{} => {Humidity=high}",0.5,0.5,1
+"{} => {Humidity=normal}",0.5,0.5,1
+"{} => {PlayTennis=P}",0.642857142857143,0.642857142857143,1
+"{Humidity=normal} => {PlayTennis=P}",0.428571428571429,0.857142857142857,1.33333333333333
+"{PlayTennis=P} => {Humidity=normal}",0.428571428571429,0.666666666666667,1.33333333333333

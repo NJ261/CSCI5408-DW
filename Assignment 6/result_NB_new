@@ -1,0 +1,130 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     Edited
+Instances:    649
+Attributes:   13
+              school
+              sex
+              Pstatus
+              Mjob
+              Fjob
+              reason
+              guardian
+              schoolsup
+              famsup
+              paid
+              activities
+              nursery
+              higher
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                Class
+Attribute         yes     no
+               (0.89) (0.11)
+=============================
+school
+  GP             392.0   33.0
+  MS             190.0   38.0
+  [total]        582.0   71.0
+
+sex
+  F              349.0   36.0
+  M              233.0   35.0
+  [total]        582.0   71.0
+
+Pstatus
+  A               71.0   11.0
+  T              511.0   60.0
+  [total]        582.0   71.0
+
+Mjob
+  at_home        109.0   28.0
+  health          49.0    1.0
+  other          229.0   31.0
+  services       126.0   12.0
+  teacher         72.0    2.0
+  [total]        585.0   74.0
+
+Fjob
+  teacher         36.0    2.0
+  other          327.0   42.0
+  services       165.0   18.0
+  health          23.0    2.0
+  at_home         34.0   10.0
+  [total]        585.0   74.0
+
+reason
+  course         247.0   40.0
+  other           62.0   12.0
+  home           138.0   13.0
+  reputation     137.0    8.0
+  [total]        584.0   73.0
+
+guardian
+  mother         415.0   42.0
+  father         140.0   15.0
+  other           28.0   15.0
+  [total]        583.0   72.0
+
+schoolsup
+  yes             67.0    3.0
+  no             515.0   68.0
+  [total]        582.0   71.0
+
+famsup
+  no             217.0   36.0
+  yes            365.0   35.0
+  [total]        582.0   71.0
+
+paid
+  no             545.0   67.0
+  yes             37.0    4.0
+  [total]        582.0   71.0
+
+activities
+  no             295.0   41.0
+  yes            287.0   30.0
+  [total]        582.0   71.0
+
+nursery
+  yes            470.0   53.0
+  no             112.0   18.0
+  [total]        582.0   71.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         171               87.6923 %
+Incorrectly Classified Instances        24               12.3077 %
+Kappa statistic                          0.0213
+Mean absolute error                      0.1767
+Root mean squared error                  0.3021
+Relative absolute error                 95.3547 %
+Root relative squared error            104.0809 %
+Total Number of Instances              195     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.960    0.944    0.909      0.960    0.934      0.023    0.740     0.969     yes
+                 0.056    0.040    0.125      0.056    0.077      0.023    0.740     0.194     no
+Weighted Avg.    0.877    0.861    0.837      0.877    0.855      0.023    0.740     0.898     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 170   7 |   a = yes
+  17   1 |   b = no
+

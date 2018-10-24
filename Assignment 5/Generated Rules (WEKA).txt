@@ -1,0 +1,42 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.5 -D 0.05 -U 1.0 -M 0.3 -S -1.0 -c -1
+Relation:     1
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              Humidity
+              Windy
+              PlayTennis
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.3 (4 instances)
+Minimum metric <confidence>: 0.5
+Number of cycles performed: 14
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 12
+
+Size of set of large itemsets L(2): 9
+
+Size of set of large itemsets L(3): 1
+
+Best rules found:
+
+ 1. outlook=overcast 4 ==> PlayTennis=P 4    <conf:(1)> lift:(1.56) lev:(0.1) [1] conv:(1.43)
+ 2. temperature=cool 4 ==> Humidity=normal 4    <conf:(1)> lift:(2) lev:(0.14) [2] conv:(2)
+ 3. Humidity=normal Windy=FALSE 4 ==> PlayTennis=P 4    <conf:(1)> lift:(1.56) lev:(0.1) [1] conv:(1.43)
+ 4. Humidity=normal 7 ==> PlayTennis=P 6    <conf:(0.86)> lift:(1.33) lev:(0.11) [1] conv:(1.25)
+ 5. PlayTennis=N 5 ==> Humidity=high 4    <conf:(0.8)> lift:(1.6) lev:(0.11) [1] conv:(1.25)
+ 6. Windy=FALSE 8 ==> PlayTennis=P 6    <conf:(0.75)> lift:(1.17) lev:(0.06) [0] conv:(0.95)
+ 7. PlayTennis=P 9 ==> Humidity=normal 6    <conf:(0.67)> lift:(1.33) lev:(0.11) [1] conv:(1.13)
+ 8. PlayTennis=P 9 ==> Windy=FALSE 6    <conf:(0.67)> lift:(1.17) lev:(0.06) [0] conv:(0.96)
+ 9. temperature=mild 6 ==> Humidity=high 4    <conf:(0.67)> lift:(1.33) lev:(0.07) [1] conv:(1)
+10. temperature=mild 6 ==> PlayTennis=P 4    <conf:(0.67)> lift:(1.04) lev:(0.01) [0] conv:(0.71)
+
