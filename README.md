@@ -1,1 +1,1 @@
-### **CSCI 5408: Data Management, Warehousing, and Analytics, Winter 2018 **
+### **CSCI 5408: Data Management, Warehousing, and Analytics, Winter 2018**
